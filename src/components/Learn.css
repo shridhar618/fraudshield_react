@@ -1,0 +1,171 @@
+.learn {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.learn-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.learn-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.learn-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.learn-content section {
+    margin-bottom: 3rem;
+}
+
+.learn-content h3 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.concept-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #667eea;
+}
+
+.concept-card h4 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.concept-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    border-radius: 1px;
+}
+
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.step-content h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.code-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.code-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.code-card h4 {
+    background: #667eea;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.code-card pre {
+    margin: 0;
+    padding: 1rem;
+    background: #2d3748;
+    color: #e2e8f0;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-card code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+@media (max-width: 768px) {
+    .concepts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .code-examples {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .process-steps::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .step-number {
+        align-self: center;
+    }
+}

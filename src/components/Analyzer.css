@@ -1,0 +1,230 @@
+.analyzer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.analyzer-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.analyzer-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.analyzer-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.analyzer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.analyzer-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.v-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.form-actions {
+    margin-top: 2rem;
+}
+
+.analyze-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.analyze-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.sample-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.sample-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sample-btn.fraud {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.sample-btn.fraud:hover {
+    background: #fecaca;
+}
+
+.sample-btn.normal {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.sample-btn.normal:hover {
+    background: #a7f3d0;
+}
+
+.results-panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-panel h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.result-card {
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: #f9f9f9;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.fraud-label {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.risk-level {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.result-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.top-features {
+    margin-top: 1.5rem;
+}
+
+.top-features h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.top-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-features li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: white;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.feature-name {
+    font-weight: 500;
+}
+
+.feature-weight {
+    color: #666;
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    .analyzer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .v-features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .sample-buttons {
+        flex-direction: column;
+    }
+}

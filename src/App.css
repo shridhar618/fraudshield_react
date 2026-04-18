@@ -1,0 +1,250 @@
+/* ============================================================
+   FraudShield AI — Global CSS Design System
+   Light fintech aesthetic with blue/purple accents
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+/* ── CSS Variables ─────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg: #ffffff;
+  --bg2: #f8f9fa;
+  --bg3: #e9ecef;
+  --bg4: #dee2e6;
+
+  /* Text */
+  --text: #212529;
+  --text2: #6c757d;
+  --text3: #495057;
+
+  /* Accent colors */
+  --accent: #667eea;
+  --accent2: #764ba2;
+  --accent3: #06d6a0;
+
+  /* Status colors */
+  --red: #dc3545;
+  --red-bg: #f8d7da;
+  --green: #28a745;
+  --green-bg: #d4edda;
+  --yellow: #ffc107;
+  --yellow-bg: #fff3cd;
+
+  /* Typography */
+  --font: 'Outfit', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --r: 12px;
+  --r2: 8px;
+  --r3: 20px;
+}
+
+/* ── Reset ──────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+}
+
+input {
+  font-family: var(--mono);
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 32px 80px;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Common Components ──────────────────────────────────── */
+button {
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+input,
+textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.4s ease;
+}
+
+/* ── Shared Utility Classes ─────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #4f8ef7, #7c6aef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-title {
+  font-family: var(--font);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  color: var(--text2);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* ── Form elements ──────────────────────────────────────── */
+.input-field {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4f8ef7, #7c6aef);
+  border: none;
+  border-radius: 9px;
+  padding: 13px 24px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text2);
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--border2);
+}
+
+/* ── Toast ──────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  padding: 12px 20px;
+  background: var(--bg3);
+  border-radius: 10px;
+  font-size: 0.84rem;
+  animation: fadeUp 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}

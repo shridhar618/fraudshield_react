@@ -1,0 +1,165 @@
+.dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.dashboard-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.metric-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.metric-card.winner {
+    border: 3px solid #ffd700;
+    background: linear-gradient(135deg, #fff8dc 0%, #ffffff 100%);
+}
+
+.metric-card h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.metric-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.metric-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.metric-label {
+    min-width: 80px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.bar-container {
+    flex: 1;
+    height: 30px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: width 1s ease-in-out;
+}
+
+.bar.precision {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.bar.recall {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.bar.f1 {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.bar.auc {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.winner-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ffd700;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dataset-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dataset-info h3 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.info-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.info-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
