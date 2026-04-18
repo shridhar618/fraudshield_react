@@ -1,5 +1,5 @@
 # 🛡️ FraudShield AI
-## MCA Final Year Project — AI-Powered Credit Card Fraud Detection
+## MCA Second Sem Mini-Project — AI-Powered Credit Card Fraud Detection
 
 ---
 
