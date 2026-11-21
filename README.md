@@ -1,4 +1,6 @@
 # 🛡️ FraudShield AI
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
 ## MCA Second Sem Mini-Project — AI-Powered Credit Card Fraud Detection
 
 ---
@@ -116,6 +118,15 @@ python backend/app.py  # Flask now serves the React build
 ```
 
 ---
+
+## Environment variables
+
+| Variable | Purpose | Default |
+|---|---|---|
+| `FRAUDSHIELD_HOST` | Host the Flask API binds to | `127.0.0.1` |
+| `PORT / FRAUDSHIELD_PORT` | API port (`PORT` takes precedence) | `5001` |
+| `FRAUDSHIELD_DEBUG` | Set to `1` to enable Flask debug mode | `1` |
+| `VITE_API_BASE` | Base URL the frontend uses to reach the API | - |
 
 ## 🌐 Deploy on PythonAnywhere (Free — Perfect for College!)
 
